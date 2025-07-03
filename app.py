@@ -7,8 +7,8 @@ app = Flask(__name__)
 CORS(app)
 
 model_path = "path/to/your/model"
-model = T5ForConditionalGeneration.from_pretrained(model_path, use_safetensors=True)
-tokenizer = T5Tokenizer.from_pretrained(model_path)
+model = T5ForConditionalGeneration.from_pretrained("seher-s/campaign")
+tokenizer = T5Tokenizer.from_pretrained("seher-s/campaign")
 
 @app.route("/predict", methods=["POST"])
 def predict():
